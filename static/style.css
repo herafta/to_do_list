@@ -1,0 +1,341 @@
+/* Custom styles for To-Do List App */
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-fluid {
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.app-title {
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.app-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Controls Section */
+.controls-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.95rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), #4a90e2);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, var(--success-color), #28a745);
+}
+
+.btn-info {
+    background: linear-gradient(45deg, var(--info-color), #17a2b8);
+}
+
+/* Table Container */
+.table-container {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    margin-top: 1rem;
+}
+
+.table {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.table thead th {
+    background: var(--dark-color);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 0.75rem;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table tbody td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    cursor: pointer;
+}
+
+/* Editable Content */
+.editable {
+    min-height: 2.5rem;
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    background: transparent;
+    word-wrap: break-word;
+    outline: none;
+}
+
+.editable:hover {
+    border-color: #e9ecef;
+    background: #f8f9fa;
+}
+
+.editable:focus {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.editable[contenteditable="true"]:empty::before {
+    content: attr(data-placeholder);
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Folder Link Styles */
+.folder-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+}
+
+.folder-link:hover {
+    background: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.folder-link i {
+    font-size: 1.1rem;
+}
+
+/* Row Numbers */
+.row-number {
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+/* Action Buttons */
+.action-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-danger-outline {
+    color: var(--danger-color);
+}
+
+.btn-danger-outline:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* Messages */
+.alert {
+    border-radius: 0.75rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+}
+
+.alert-success {
+    background: linear-gradient(45deg, #d4edda, #c3e6cb);
+    color: #155724;
+}
+
+.alert-danger {
+    background: linear-gradient(45deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+}
+
+.alert-info {
+    background: linear-gradient(45deg, #cce7ff, #b3d9ff);
+    color: #0c5460;
+}
+
+/* Empty State */
+.empty-state {
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.btn.loading {
+    position: relative;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    margin: auto;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 1rem 0.5rem;
+    }
+    
+    .app-title {
+        font-size: 2rem;
+    }
+    
+    .controls-section {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .table {
+        font-size: 0.85rem;
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .empty-state {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-title {
+        font-size: 1.75rem;
+    }
+    
+    .controls-section .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .table-container {
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation for new rows */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-row-new {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Focus management */
+.table tbody tr:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+}

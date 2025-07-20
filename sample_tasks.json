@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "folderPath": "C:\\Projects\\WebDevelopment",
+    "taskBrief": "Complete the To-Do List application",
+    "notes": "Implement frontend with Bootstrap, add inline editing, create Flask backend with CORS, ensure responsive design works on all devices."
+  },
+  {
+    "id": 2,
+    "folderPath": "/home/user/documents/reports",
+    "taskBrief": "Finish quarterly report",
+    "notes": "Review sales data, compile analytics, create visualizations, and present findings to management team by Friday."
+  },
+  {
+    "id": 3,
+    "folderPath": "D:\\Personal\\Learning",
+    "taskBrief": "Study JavaScript ES6+ features",
+    "notes": "Focus on arrow functions, destructuring, async/await, modules, and new array methods. Practice with coding exercises."
+  },
+  {
+    "id": 4,
+    "folderPath": "",
+    "taskBrief": "Schedule team meeting",
+    "notes": "Coordinate with all team members to find a suitable time slot. Prepare agenda items including project updates and sprint planning."
+  }
+]
